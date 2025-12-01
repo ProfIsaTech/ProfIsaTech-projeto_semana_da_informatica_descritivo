@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac - Semana da Informática</title>
+    <link rel="icon" href="/resources/logo.png" type="image/x-icon">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f7f7f7;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 20px 40px;
+            font-size: 26px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .titulo{
+            font-size: 50px;
+            color: #007bff;
+        }
+
+        .aviso{
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="titulo">EXPOSIÇÃO</h1>
+    <h2>Da Nostalgia à Inovação: Uma Viagem pela História dos Videogames</h2>
+
+    <br>
+    <br>
+    
+    <button id="btnOuvir">Ouvir descrição</button>
+
+    <br>
+    <br>
+
+    <span class="aviso">Este áudio foi gerado por Inteligência Artificial.</span>
+
+    <audio id="audioDescricao" src="resources/audio_descritivo_rapido.mp3"></audio>
+
+    <script>
+        const audio = document.getElementById("audioDescricao");
+        const btn = document.getElementById("btnOuvir");
+
+        btn.addEventListener("click", () => {
+            audio.currentTime = 0;
+            audio.play();
+        });
+    </script>
+
+</body>
+</html>
